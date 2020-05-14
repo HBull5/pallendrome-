@@ -9,12 +9,14 @@
     * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
     }
 
     html, body {
         height: 100vh;
         width: 100%;
         font-family: Arial, Helvetica, sans-serif;
+        background: slategrey;
     }   
 
     .container {
@@ -23,12 +25,35 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+    }
+
+    .container #output {
+        margin-bottom: 1rem;
+        font-size: 50px;
+    }
+
+    .container #input {
+        width: 480px;
+        height: 30px;
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .container #submitBtn {
+        height: 30px;
+        width: 480px;
+        background: green;
+        color: #fff;
+        border: none;
     }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 id="output"></h1>
+        <div id="output"></div>
+        <input type="text" placeholder="enter a word" id="input">
+        <input type="submit" id="submitBtn">
     </div>
 <script src="app.js"></script>
 </body>
